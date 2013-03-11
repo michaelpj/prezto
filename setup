@@ -1,0 +1,10 @@
+#! /bin/bash
+# Setup script for prezto
+
+# Link all the dotfiles into home
+PREZTO_DOTFILES=`ls $HOME/.zprezto/runcoms | grep -v README.md`
+for rcfile in $PREZTO_DOTFILES
+do
+  echo $rcfile
+  ln -s $HOME/.zprezto/runcoms/$rcfile $HOME/.$rcfile
+done
