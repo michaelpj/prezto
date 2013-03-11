@@ -6,5 +6,5 @@ PREZTO_DOTFILES=`ls $HOME/.zprezto/runcoms | grep -v README.md`
 for rcfile in $PREZTO_DOTFILES
 do
   echo $rcfile
-  ln -s $HOME/.zprezto/runcoms/$rcfile $HOME/.$rcfile
+  ln -s -f $HOME/.zprezto/runcoms/$rcfile $HOME/.$rcfile
 done
